@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>Welcome To My Resume Information</h1>
+        <p>I am <%= firstName + " " + lastName %></p>
+        <p>I am <%= age %> years old</p>
+        <p>I live near <%= address %></p>
+        <p>Contact me: <%= phoneNum %></p>
+
+        <h2>Education</h2>
+        <ul>
+            <% education.forEach(function(edu) { %>
+                <li><%= edu %></li>
+            <% }) %>
+        </ul>
+
+        <h2>Work Experience</h2>
+        <ul>
+            <% experience.forEach(function(exp) { %>
+                <li><%= exp %></li>
+            <% }) %>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <% skills.forEach(function(skill) { %>
+                <li><%= skill %></li>
+            <% }) %>
+        </ul>
+    </section>
+</body>
+</html>
